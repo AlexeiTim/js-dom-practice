@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 0 5px;
+}
+
+ul {
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+button {
+  position: relative;
+  border-radius: 5px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
+
+button .button-tooltip {
+  position: absolute;
+  border: 1px solid black;
+  color: black;
+  background-color: #0d99a5;
+  z-index: 2;
+  height: 0;
+  width: 0;
+  font-size: 0;
+  transition: all .3s ease;
+}
+
+button:hover .button-tooltip {
+  height: auto;
+  width: auto;
+  font-size: 16px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 5px;
+  gap: 5px;
+}
+
+.todos .todo {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.todos .todo__text.complete {
+  text-decoration-line: line-through;
+}
+
+.todos .todo__text.edit {
+  text-decoration-line: line-through;
+}
+
+.is-complete {
+  text-decoration: line-through;
+}
+
+.todo-filters {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.todo-filters > * {
+  display: inline;
+}
+
